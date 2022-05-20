@@ -2,70 +2,70 @@
   "products": [
     {
       "name": "Leche",
-      "image": "https://raw.githubusercontent.com/SoleMina/challenge-n5/main/src/assets/images/macbook-air.jpg",
+      "image": "https://preview.free3d.com/img/2019/08/2202386574556005414/8e7npya1-900.jpg",
       "price": 75000,
       "amount": 2,
       "id": 1
     },
     {
       "name": "Cereal",
-      "image": "https://raw.githubusercontent.com/SoleMina/challenge-n5/main/src/assets/images/macbook-air.jpg",
+      "image": "https://e39a9f00db6c5bc097f9-75bc5dce1d64f93372e7c97ed35869cb.ssl.cf1.rackcdn.com/41523103-ZZP7PwFL-large.jpg",
       "price": 85300,
       "amount": 3,
       "id": 2
     },
     {
       "name": "Huevos",
-      "image": "https://raw.githubusercontent.com/SoleMina/challenge-n5/main/src/assets/images/macbook-air.jpg",
+      "image": "https://media.admagazine.com/photos/61ddf56e089751617cd2fc66/1:1/w_1414,h_1414,c_limit/HUEVOS.jpg",
       "price": 75000,
       "amount": 12,
       "id": 3
     },
     {
       "name": "Carne",
-      "image": "https://raw.githubusercontent.com/SoleMina/challenge-n5/main/src/assets/images/macbook-air.jpg",
+      "image": "https://static.larioja.com/noticias/201512/19/media/9924117.jpg",
       "price": 85300,
       "amount": 21,
       "id": 4
     },
     {
       "name": "Queso",
-      "image": "https://raw.githubusercontent.com/SoleMina/challenge-n5/main/src/assets/images/macbook-air.jpg",
+      "image": "https://i0.wp.com/www.opportimes.com/wp-content/uploads/2016/05/queso-dos.png?resize=639%2C504&ssl=1",
       "price": 75000,
       "amount": 8,
       "id": 5
     },
     {
       "name": "Arroz",
-      "image": "https://raw.githubusercontent.com/SoleMina/challenge-n5/main/src/assets/images/macbook-air.jpg",
+      "image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2020/06/23/0/FNK_Perfect-Long-Grain-White-Rice-H_s4x3.jpg.rend.hgtvcom.616.462.suffix/1592939598668.jpeg",
       "price": 85300,
       "amount": 9,
       "id": 6
     },
     {
       "name": "Frijoles",
-      "image": "https://raw.githubusercontent.com/SoleMina/challenge-n5/main/src/assets/images/macbook-air.jpg",
+      "image": "https://images.cookforyourlife.org/wp-content/uploads/2018/08/Healthy-Baked-Beans.jpg",
       "price": 85300,
       "amount": 32,
       "id": 7
     },
     {
       "name": "Lentejas",
-      "image": "https://raw.githubusercontent.com/SoleMina/challenge-n5/main/src/assets/images/macbook-air.jpg",
+      "image": "https://www.endosistemas.com/wp-content/uploads/2020/09/lentejas-rojas-tazon-madera-sobre-mesa-madera_71756-509.jpg",
       "price": 175000,
       "amount": 42,
       "id": 8
     },
     {
       "name": "Avena",
-      "image": "https://raw.githubusercontent.com/SoleMina/challenge-n5/main/src/assets/images/macbook-air.jpg",
+      "image": "https://mejorconsalud.as.com/wp-content/uploads/2015/09/avena-hojuelas.jpg",
       "price": 85300,
       "amount": 56,
       "id": 9
     },
     {
       "name": "Pollo",
-      "image": "https://raw.githubusercontent.com/SoleMina/challenge-n5/main/src/assets/images/macbook-air.jpg",
+      "image": "https://www.recetasderechupete.com/wp-content/uploads/2018/03/Pollo-trocear.jpg?width=1200&enable=upscale",
       "price": 375000,
       "amount": 23,
       "id": 10

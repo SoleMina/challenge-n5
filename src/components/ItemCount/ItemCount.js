@@ -21,7 +21,7 @@ const ItemCount = ({ amount, onAdd }) => {
           <button className="count__btnStyle" onClick={() => decrement()}>
             -
           </button>
-          <p>{count}</p>
+          <p className="m-0">{count}</p>
           <button className="count__btnStyle" onClick={() => increment()}>
             +
           </button>

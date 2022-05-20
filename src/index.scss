@@ -19,11 +19,14 @@ code {
 }
 .lightMode {
   background-color: #4169e1;
+  transition: all 0.7s;
 }
 .darkMode {
   background-color: black;
   color: white;
+  transition: all 0.7s;
 }
 .bodyColor {
   background-color: #848484;
+  transition: all 0.7s;
 }

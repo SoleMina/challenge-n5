@@ -32,6 +32,13 @@ const Header = () => {
         <Navbar.Brand as={Link} to="/">
           Karina Store
         </Navbar.Brand>
+        <Nav.Link href="#">
+          <div>
+            <button onClick={changeHandle}>
+              {darkMode ? "Light Mode" : "Dark Mode"}
+            </button>
+          </div>
+        </Nav.Link>
         <Nav.Link
           eventKey={2}
           as={Link}
@@ -45,13 +52,7 @@ const Header = () => {
             <Nav.Link href="#"></Nav.Link>
           </Nav>
           <Nav>
-            <Nav.Link href="#">
-              <div>
-                <button onClick={changeHandle}>
-                  {darkMode ? "Change to Light Mode" : "Change to Dark Mode"}
-                </button>
-              </div>
-            </Nav.Link>
+            <Nav.Link href="#"></Nav.Link>
             <NavDropdown title="Categorías" id="basic-nav-dropdown">
               <NavDropdown.Item as={Link} to="/category/laptop">
                 Laptops

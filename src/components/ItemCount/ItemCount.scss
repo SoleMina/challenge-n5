@@ -4,6 +4,8 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  align-self: center;
 }
 .count__btnStyle {
   background-color: black;
