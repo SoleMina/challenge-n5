@@ -1,34 +1,36 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Header } from "./components";
-import "./App.scss";
-import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./views/Home";
 
+//Importar Provider y envolver nuestra app
+import { CartContext } from "./CartContext";
+import { useItemsContext } from "./CartContext";
+
+//Estilos
+import "./App.scss";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Cart from "./views/Cart";
+
 function App() {
+  const { changeMode, darkMode } = useItemsContext();
   return (
-    <Router>
-      <Header />
-      <Routes>
-        <Route
-          exact
-          path="/"
-          element={
-            <>
-              <Home />
-            </>
-          }
-        />
-        <Route
-          exact
-          path="/test"
-          element={
-            <>
-              <h2>Pruebaaaa</h2>
-            </>
-          }
-        />
-      </Routes>
-    </Router>
+    <CartContext>
+      <Router>
+        <Header />
+        <Routes>
+          <Route
+            exact
+            path="/"
+            element={
+              <>
+                <Home />
+              </>
+            }
+          />
+          <Route exact path="/cart" element={<Cart />} />
+        </Routes>
+      </Router>
+    </CartContext>
   );
 }
 

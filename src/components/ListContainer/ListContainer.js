@@ -5,12 +5,14 @@ import "./ListContainer.scss";
 const ListContainer = () => {
   const [products, setProducts] = useState([]);
 
+  const fetchData = async () => {
+    const response = await fetch("./data.json");
+    const result = await response.json();
+    result && setProducts(result.products);
+  };
+
   useEffect(() => {
-    fetch(
-      "https://raw.githubusercontent.com/SoleMina/challenge-n5/main/src/assets/data.json"
-    )
-      .then((response) => response.json())
-      .then((res) => setProducts(res.products));
+    fetchData();
   }, []);
 
   console.log(products);
@@ -21,9 +23,11 @@ const ListContainer = () => {
         {products &&
           products.map((product) => (
             <ItemContainer
-              name={product.id}
+              key={product.id}
+              name={product.name}
               price={product.price}
               image={product.image}
+              amount={product.amount}
             />
           ))}
       </div>

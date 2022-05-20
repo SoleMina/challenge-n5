@@ -9,13 +9,25 @@ import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 //Import component
 import CartWidget from "./CartWidget";
+import { useItemsContext } from "../../CartContext";
 
 //Import style
 import "./Header.scss";
 
 const Header = () => {
+  const { changeMode, darkMode } = useItemsContext();
+
+  const changeHandle = () => {
+    changeMode();
+  };
+
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar
+      collapseOnSelect
+      expand="lg"
+      variant="dark"
+      className={"test " + `${darkMode ? "darkMode" : "lightMode"}`}
+    >
       <Container>
         <Navbar.Brand as={Link} to="/">
           Karina Store
@@ -33,7 +45,13 @@ const Header = () => {
             <Nav.Link href="#"></Nav.Link>
           </Nav>
           <Nav>
-            <Nav.Link href="#">Test</Nav.Link>
+            <Nav.Link href="#">
+              <div>
+                <button onClick={changeHandle}>
+                  {darkMode ? "Change to Light Mode" : "Change to Dark Mode"}
+                </button>
+              </div>
+            </Nav.Link>
             <NavDropdown title="Categorías" id="basic-nav-dropdown">
               <NavDropdown.Item as={Link} to="/category/laptop">
                 Laptops
