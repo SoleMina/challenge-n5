@@ -20,7 +20,11 @@ const ListContainer = () => {
       <div className="list__products">
         {products &&
           products.map((product) => (
-            <ItemContainer name={product.id} price={product.price} />
+            <ItemContainer
+              name={product.id}
+              price={product.price}
+              image={product.image}
+            />
           ))}
       </div>
     </div>
