@@ -2,6 +2,7 @@
   "products": [
     {
       "name": "Leche",
+      "image": "./images/macbook-air.jpg",
       "price": 75000,
       "amount": 2,
       "id": 1

@@ -1,0 +1,22 @@
+.count__actions {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.count__btnStyle {
+  background-color: black;
+  color: white;
+  outline: none;
+  border-color: black;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 transparent),
+    var(--tw-ring-shadow, 0 0 transparent), var(--tw-shadow);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover {
+    background-color: white;
+    color: black;
+  }
+}
