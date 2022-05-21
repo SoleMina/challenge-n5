@@ -12,7 +12,9 @@ const Footer = () => {
   return (
     <div className={`footer ${darkMode ? "darkMode" : "lightMode"}`}>
       <div className="footer__info">
-        <p className="m-0">All rights reserved - Karina Prado {currentDate}</p>
+        <p className="text-white m-0">
+          All rights reserved - Karina Prado {currentDate}
+        </p>
       </div>
     </div>
   );

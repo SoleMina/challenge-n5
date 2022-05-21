@@ -73,6 +73,7 @@ const CartContainer = () => {
             <h4 className="mt-5 mb-5">
               Oops you don't have products added to the cart
             </h4>
+            <p>Check our products and buy all what you want</p>
             <FontAwesomeIcon
               icon={faShoppingCart}
               style={{ fontSize: "300px", marginBottom: "5%" }}

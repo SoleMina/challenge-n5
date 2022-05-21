@@ -3,8 +3,7 @@ import { CartContainer } from "../components";
 
 const Cart = () => {
   return (
-    <div className="container">
-      <h1 className="text-center">Cart Information</h1>
+    <div className="container p-4">
       <CartContainer />
     </div>
   );
