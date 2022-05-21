@@ -8,11 +8,11 @@ import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 //Import component
-import CartWidget from "./CartWidget";
+import CartWidget from "../CartWidget/CartWidget";
 import { useItemsContext } from "../../CartContext";
 
 //Import style
-import "./Header.scss";
+import styles from "./header.module.scss";
 
 const Header = () => {
   const { changeMode, darkMode } = useItemsContext();
@@ -34,7 +34,7 @@ const Header = () => {
         </Navbar.Brand>
         <Nav.Link href="#">
           <div>
-            <button onClick={changeHandle}>
+            <button onClick={changeHandle} className={styles.btn}>
               {darkMode ? "Light Mode" : "Dark Mode"}
             </button>
           </div>

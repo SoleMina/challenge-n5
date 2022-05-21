@@ -24,12 +24,23 @@ export const CartContext = ({ children }) => {
     }
   };
 
+  const productsLocal = () => {
+    if (localStorage.getItem("products") !== null) {
+      return JSON.parse(localStorage.getItem("products"));
+    } else {
+      return [];
+    }
+  };
+
+  //Array products on json (api)
+  const [products, setProducts] = useState(productsLocal);
+
   //Array of products
   const [cartItems, setCartItems] = useState(itemsInLocal);
   //Sum price of all the products in the cart
   const [totalPrice, setTotalPrice] = useState(0);
   //Sum of products in the cart
-  const [totalProducts, setTotalProducts] = useState(0);
+  const [totalProducts, setTotalProducts] = useState([]);
   //Item
   const [item, setItem] = useState([]);
   //DarkMode
@@ -55,6 +66,27 @@ export const CartContext = ({ children }) => {
     } else {
       setCartItems((prev) => [...prev, { ...item, amount }]);
     }
+
+    const updateStock = () => {
+      for (const obj of products) {
+        if (obj.id === item.id) {
+          obj.amount = obj.amount - amount;
+          break;
+        }
+      }
+
+      /*
+      
+      const newProducts = products.map((elem) => {
+        if (elem.id === item.id) {
+          elem.amount = elem.amount - amount;
+        }
+      });
+      setProducts(newProducts); */
+    };
+    console.log("STOCKKKK", products);
+    setProducts(products);
+    updateStock();
   };
 
   //Add Product to firebase with Form
@@ -107,6 +139,8 @@ export const CartContext = ({ children }) => {
     updateItems();
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
     localStorage.setItem("darkMode", JSON.stringify(darkMode));
+    localStorage.setItem("products", JSON.stringify(products));
+
     getPrice();
   });
 
@@ -127,7 +161,9 @@ export const CartContext = ({ children }) => {
         setTotalProducts,
         isInCart,
         changeMode,
-        darkMode
+        darkMode,
+        products,
+        setProducts
       }}
     >
       {children}

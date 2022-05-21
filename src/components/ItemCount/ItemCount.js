@@ -1,10 +1,19 @@
 import React, { useState } from "react";
 //Import context
 import { useItemsContext } from "../../CartContext";
+import Swal from "sweetalert2";
+
 import "./ItemCount.scss";
 
 const ItemCount = ({ amount, onAdd, item, quantityToAdd }) => {
-  const { addProductCart, totalPrice, addToCart } = useItemsContext();
+  const {
+    addProductCart,
+    totalPrice,
+    addToCart,
+    products,
+    setProducts
+  } = useItemsContext();
+
   const [count, setCount] = useState(0);
 
   const increment = () => {
@@ -12,6 +21,25 @@ const ItemCount = ({ amount, onAdd, item, quantityToAdd }) => {
   };
   const decrement = () => {
     count > 0 && setCount(count - 1);
+  };
+
+  const AddProduct = () => {
+    if (count) {
+      onAdd(count);
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Your product has been saved",
+        showConfirmButton: false,
+        timer: 1500
+      });
+    } else {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "You didn't add products to the cart"
+      });
+    }
   };
 
   return (
@@ -26,7 +54,7 @@ const ItemCount = ({ amount, onAdd, item, quantityToAdd }) => {
             +
           </button>
         </div>
-        <button className="count__btnStyle" onClick={() => onAdd(count)}>
+        <button className="count__btnStyle" onClick={AddProduct}>
           Agregar al carrito
         </button>
       </div>

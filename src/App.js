@@ -7,9 +7,9 @@ import Home from "./views/Home";
 import { CartContext } from "./CartContext";
 
 //Estilos
-import "./App.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Cart from "./views/Cart";
+import Thankyou from "./views/Thankyou";
 
 function App() {
   return (
@@ -19,6 +19,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/cart" element={<Cart />} />
+          <Route exact path="/thankyou" element={<Thankyou />} />
         </Routes>
         <Footer />
       </Router>

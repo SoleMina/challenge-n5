@@ -15,13 +15,6 @@ const CartContainer = () => {
   console.log(cartItems);
   return (
     <div className={`h-100 ${cartItems.length > 0 ? "bg-gray" : ""}`}>
-      <h1
-        className={`text-center pt-4 mb-4 ${
-          cartItems.length > 0 ? "text-white" : "text-black"
-        }`}
-      >
-        CART
-      </h1>
       {cartItems.length > 0 && (
         <div
           className="cart-item text-center"
@@ -60,7 +53,7 @@ const CartContainer = () => {
               <div className="col-md-12 text-center">
                 Monto Total:
                 <p>S/. {totalPrice}</p>
-                <Link to={`/FormUser`} className="btn btn-primary">
+                <Link to={`/thankyou`} className="btn btn-primary">
                   Finalize your purchase
                 </Link>
               </div>

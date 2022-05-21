@@ -3,9 +3,12 @@ import { ItemContainer } from "../ItemContainer";
 import Spinner from "../SpinnerContainer/SpinnerContainer";
 import "./ListContainer.scss";
 
+//Import context
+import { useItemsContext } from "../../CartContext";
+
 const ListContainer = () => {
   const [loading, setLoading] = useState(true);
-  const [products, setProducts] = useState([]);
+  const { products, setProducts } = useItemsContext();
 
   const fetchData = async () => {
     const response = await fetch("./data.json");
