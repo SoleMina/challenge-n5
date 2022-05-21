@@ -16,6 +16,13 @@ export const CartContext = ({ children }) => {
       return [];
     }
   };
+  const darkModeInLocal = () => {
+    if (localStorage.getItem("darkMode") !== null) {
+      return JSON.parse(localStorage.getItem("darkMode"));
+    } else {
+      return false;
+    }
+  };
 
   //Array of products
   const [cartItems, setCartItems] = useState(itemsInLocal);
@@ -26,7 +33,8 @@ export const CartContext = ({ children }) => {
   //Item
   const [item, setItem] = useState([]);
   //DarkMode
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(darkModeInLocal);
+  console.log("MODEEEE", darkMode);
 
   //Check if an element have the same id
   const isInCart = (id) => cartItems.some((e) => e.id === id);
@@ -98,6 +106,7 @@ export const CartContext = ({ children }) => {
   useEffect(() => {
     updateItems();
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    localStorage.setItem("darkMode", JSON.stringify(darkMode));
     getPrice();
   });
 
