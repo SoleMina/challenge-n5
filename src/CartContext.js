@@ -36,17 +36,34 @@ export const CartContext = ({ children }) => {
   };
 
   //Add product to array
-  const addToCart = (item, quantity) => {
+  const addToCart = (item, amount) => {
     if (isInCart(item.id)) {
       const newCartItem = cartItems.map((cartElement) => {
         if (cartElement.id === item.id) {
-          return { ...cartElement, quantity: cartElement.quantity + quantity };
+          return { ...cartElement, amount: cartElement.amount + amount };
         } else return cartElement;
       });
       setCartItems(newCartItem);
     } else {
-      setCartItems((prev) => [...prev, { ...item, quantity }]);
+      setCartItems((prev) => [...prev, { ...item, amount }]);
     }
+  };
+
+  //Add Product to firebase with Form
+  const addProductCart = async (cartItems, totalPrice) => {
+    const object = {
+      item: cartItems,
+      date: new Date(),
+      total: totalPrice
+    };
+    console.log("Producto agregado!!!!");
+
+    const updateStock = () => {
+      cartItems.forEach((element) => {
+        console.log("testtt");
+      });
+    };
+    updateStock();
   };
 
   //Delete item from array
@@ -59,14 +76,14 @@ export const CartContext = ({ children }) => {
 
   //Update the ammount of Products in the cart
   const updateItems = () => {
-    let sumaProductos = cartItems.reduce((a, item) => a + item.quantity, 0);
+    let sumaProductos = cartItems.reduce((a, item) => a + item.amount, 0);
     setTotalProducts(sumaProductos);
   };
 
   //Get price from a especific item of the array
   const getPrice = () => {
     const total = cartItems.reduce(
-      (a, item) => a + item.price * item.quantity,
+      (a, item) => a + item.price * item.amount,
       0
     );
     setTotalPrice(total);

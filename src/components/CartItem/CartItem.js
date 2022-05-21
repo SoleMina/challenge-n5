@@ -20,19 +20,19 @@ const CartItem = ({ item }) => {
       <div className="cart-item text-center">
         <div className="row">
           <div className="col-md-2 justify-content-center">
-            <img src={item.img} alt="Producto" width="80" />
+            <img src={item.image} alt="Producto" width="80" />
           </div>
           <div className="col-md-2">
-            <h5>{item.title}</h5>
+            <h5>{item.name}</h5>
           </div>
           <div className="col-md-2">
-            <p>{item.quantity}</p>
+            <p>{item.amount}</p>
           </div>
           <div className="col-md-2">
             <p> S/. {item.price}</p>
           </div>
           <div className="col-md-2">
-            <p> S/. {item.price * item.quantity}</p>
+            <p> S/. {item.price * item.amount}</p>
           </div>
           <div className="col-md-2">
             <FontAwesomeIcon

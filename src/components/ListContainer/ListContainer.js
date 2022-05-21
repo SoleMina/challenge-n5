@@ -23,6 +23,7 @@ const ListContainer = () => {
         {products &&
           products.map((product) => (
             <ItemContainer
+              item={product}
               key={product.id}
               name={product.name}
               price={product.price}

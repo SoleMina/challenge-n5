@@ -1,7 +1,10 @@
 import React, { useState } from "react";
+//Import context
+import { useItemsContext } from "../../CartContext";
 import "./ItemCount.scss";
 
-const ItemCount = ({ amount, onAdd }) => {
+const ItemCount = ({ amount, onAdd, item, quantityToAdd }) => {
+  const { addProductCart, totalPrice, addToCart } = useItemsContext();
   const [count, setCount] = useState(0);
 
   const increment = () => {
@@ -11,9 +14,6 @@ const ItemCount = ({ amount, onAdd }) => {
     count > 0 && setCount(count - 1);
   };
 
-  const addProducts = () => {
-    console.log(count);
-  };
   return (
     <>
       <div className="count pb-4">

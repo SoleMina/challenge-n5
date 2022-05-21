@@ -12,6 +12,7 @@ import "./CartContainer.scss";
 
 const CartContainer = () => {
   const { cartItems, totalPrice } = useItemsContext();
+  console.log(cartItems);
   return (
     <div className={`h-100 ${cartItems.length > 0 ? "bg-gray" : ""}`}>
       <h1
@@ -51,6 +52,7 @@ const CartContainer = () => {
       {cartItems.length > 0 ? (
         <div>
           {cartItems.map((item) => {
+            console.log("ITEMMMM", item);
             return <CartItem key={item.id} item={item} />;
           })}
           <div className="cart-item">

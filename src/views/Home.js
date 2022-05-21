@@ -6,7 +6,7 @@ const Home = () => {
   const { changeMode, darkMode } = useItemsContext();
 
   return (
-    <div className={` ${darkMode && "bodyColor"}`}>
+    <div className={`pt-3 pb-5 ${darkMode && "bodyColor"}`}>
       <h2 className="text-center p-4">Productos</h2>
       <ListContainer />
     </div>

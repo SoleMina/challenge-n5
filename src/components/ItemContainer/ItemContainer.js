@@ -4,15 +4,16 @@ import ItemCount from "../ItemCount/ItemCount";
 //Import context
 import { useItemsContext } from "../../CartContext";
 
-const ItemContainer = ({ id, image, name, price, amount, description }) => {
+const ItemContainer = ({ id, image, name, price, amount, item }) => {
   const [cart, setCart] = useState(0);
-  const { addToCart, removeItem, item } = useItemsContext();
+  const { addToCart, removeItem } = useItemsContext();
 
   //On Add
   const onAdd = (quantityToAdd) => {
     setCart(quantityToAdd);
     addToCart(item, quantityToAdd);
   };
+
   return (
     <Card className="text-center item" style={{ width: "18rem" }}>
       <Card.Img variant="top" src={image} alt="" className="item__image" />
