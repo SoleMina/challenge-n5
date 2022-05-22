@@ -3,19 +3,23 @@ import { Link } from "react-router-dom";
 
 //Import from bootstrap
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
-
 //Import icon
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
-
 //Import component
 import CartWidget from "../CartWidget/CartWidget";
 import { useItemsContext } from "../../CartContext";
-
+import { useDispatch, useSelector } from "react-redux";
+import { login, selectUser } from "../../features/userSlice";
 //Import style
 import styles from "./header.module.scss";
 
 const Header = () => {
   const { changeMode, darkMode } = useItemsContext();
+
+  const dispatch = useDispatch();
+  const user = useSelector(selectUser);
+
+  dispatch(login(true));
 
   const changeHandle = () => {
     changeMode();
@@ -31,7 +35,7 @@ const Header = () => {
       >
         <Container>
           <Navbar.Brand as={Link} to="/">
-            Karina Store
+            N5 Now Store
           </Navbar.Brand>
           <Nav.Link href="#">
             <div className="header__mobile">
@@ -63,7 +67,7 @@ const Header = () => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#"></Nav.Link>
+              <Nav.Link href="#">{user && "Hello Karina"}</Nav.Link>
             </Nav>
             <Nav>
               <Nav.Link href="#"></Nav.Link>

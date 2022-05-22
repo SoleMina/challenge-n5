@@ -11,8 +11,12 @@ import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import "./CartContainer.scss";
 
 const CartContainer = () => {
-  const { cartItems, totalPrice } = useItemsContext();
+  const { cartItems, totalPrice, products, setProducts } = useItemsContext();
   console.log(cartItems);
+
+  const finalPurchase = () => {
+    setProducts(products);
+  };
   return (
     <div className={`h-100 ${cartItems.length > 0 ? "bg-gray" : ""}`}>
       {cartItems.length > 0 ? (
@@ -25,8 +29,12 @@ const CartContainer = () => {
             <div className="row">
               <div className="col-md-12 text-center">
                 Monto Total:
-                <p>S/. {totalPrice}</p>
-                <Link to={`/thankyou`} className="btn btn-primary">
+                <p>$/. {totalPrice}</p>
+                <Link
+                  to={`/thankyou`}
+                  className="btn btn-primary"
+                  onClick={finalPurchase}
+                >
                   Finalize your purchase
                 </Link>
               </div>

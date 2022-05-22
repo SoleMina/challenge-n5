@@ -36,6 +36,12 @@ code {
   background-color: #848484;
   transition: all 0.7s;
 }
+.mobile,
+.desktop {
+  .svg-inline--fa {
+    color: white;
+  }
+}
 .mobile {
   @include mixin.desktop {
     display: none;

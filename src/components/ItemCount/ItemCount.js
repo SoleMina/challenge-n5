@@ -6,14 +6,6 @@ import Swal from "sweetalert2";
 import "./ItemCount.scss";
 
 const ItemCount = ({ amount, onAdd, item, quantityToAdd }) => {
-  const {
-    addProductCart,
-    totalPrice,
-    addToCart,
-    products,
-    setProducts
-  } = useItemsContext();
-
   const [count, setCount] = useState(1);
 
   const increment = () => {

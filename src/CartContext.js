@@ -163,7 +163,8 @@ export const CartContext = ({ children }) => {
         changeMode,
         darkMode,
         products,
-        setProducts
+        setProducts,
+        productsLocal
       }}
     >
       {children}

@@ -11,10 +11,14 @@ const ListContainer = () => {
   const { products, setProducts } = useItemsContext();
 
   const fetchData = async () => {
-    const response = await fetch("./data.json");
-    const result = await response.json();
-    result && setProducts(result.products);
-    setLoading(false);
+    if (products.length < 1) {
+      const response = await fetch("./data.json");
+      const result = await response.json();
+      result && setProducts(result.products);
+      setLoading(false);
+    } else {
+      setLoading(false);
+    }
   };
 
   useEffect(() => {

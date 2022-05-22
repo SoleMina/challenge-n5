@@ -6,7 +6,7 @@ import { useItemsContext } from "../../CartContext";
 
 const ItemContainer = ({ id, image, name, price, amount, item }) => {
   const [cart, setCart] = useState(0);
-  const { addToCart, removeItem, products, setProducts } = useItemsContext();
+  const { addToCart } = useItemsContext();
 
   //On Add
   const onAdd = (quantityToAdd) => {
