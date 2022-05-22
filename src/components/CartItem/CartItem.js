@@ -23,15 +23,19 @@ const CartItem = ({ item }) => {
             <img src={item.image} alt="Producto" width="80" />
           </div>
           <div className="col-md-2">
-            <h5>{item.name}</h5>
+            <span className="font-weight-bold">Product:</span>
+            <h6>{item.name}</h6>
           </div>
           <div className="col-md-2">
-            <p>{item.amount}</p>
+            <span>Amount: </span>
+            <p> {item.amount}</p>
           </div>
           <div className="col-md-2">
+            <span>Price:</span>
             <p> S/. {item.price}</p>
           </div>
           <div className="col-md-2">
+            <span>Total:</span>
             <p> S/. {item.price * item.amount}</p>
           </div>
           <div className="col-md-2">

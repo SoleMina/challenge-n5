@@ -10,7 +10,7 @@ import styles from "./CartWidget.module.scss";
 const CartWidget = (props) => {
   const { cartItems, totalProducts } = useItemsContext();
   return (
-    <div>
+    <div className={props.class}>
       <FontAwesomeIcon icon={props.icon} data-count="0" />
       <span className={styles.cart__counter}>
         {cartItems.length > 0 ? totalProducts : 0}

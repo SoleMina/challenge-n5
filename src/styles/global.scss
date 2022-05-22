@@ -1,3 +1,4 @@
+@use "./mixin.scss" as mixin;
 *,
 *:before,
 *:after {
@@ -34,4 +35,19 @@ code {
 .bodyColor {
   background-color: #848484;
   transition: all 0.7s;
+}
+.mobile {
+  @include mixin.desktop {
+    display: none;
+  }
+}
+.mobile {
+  @include mixin.tablet {
+    display: none;
+  }
+}
+.desktop {
+  @include mixin.mobile {
+    display: none;
+  }
 }

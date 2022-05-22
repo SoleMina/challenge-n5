@@ -1,3 +1,5 @@
+@use "../../styles/mixin.scss" as mixin;
+
 .cart__counter {
   position: absolute;
   width: 16px;

@@ -15,33 +15,6 @@ const CartContainer = () => {
   console.log(cartItems);
   return (
     <div className={`h-100 ${cartItems.length > 0 ? "bg-gray" : ""}`}>
-      {cartItems.length > 0 && (
-        <div
-          className="cart-item text-center"
-          style={{ backgroundColor: "#181d38", color: "white" }}
-        >
-          <div className="row">
-            <div className="col-md-2 justify-content-center">
-              <h5>Product</h5>
-            </div>
-            <div className="col-md-2">
-              <h5>Product Name</h5>
-            </div>
-            <div className="col-md-2">
-              <h5>Cantidad</h5>
-            </div>
-            <div className="col-md-2">
-              <h5>Price x Unit</h5>
-            </div>
-            <div className="col-md-2">
-              <h5>Total Price</h5>
-            </div>
-            <div className="col-md-2">
-              <h5>Delete Product</h5>
-            </div>
-          </div>
-        </div>
-      )}
       {cartItems.length > 0 ? (
         <div>
           {cartItems.map((item) => {
