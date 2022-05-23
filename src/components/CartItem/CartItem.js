@@ -1,5 +1,5 @@
 import React from "react";
-
+import Swal from "sweetalert2";
 //Import context
 import { useItemsContext } from "../../CartContext";
 
@@ -14,6 +14,22 @@ import "./CartItem.scss";
 
 const CartItem = ({ item }) => {
   const { removeItem } = useItemsContext();
+
+  const deleteElement = () => {
+    Swal.fire({
+      title: "Are you sure?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete product!"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        removeItem(item.id);
+        Swal.fire("Deleted!", "Your product has been deleted.", "success");
+      }
+    });
+  };
 
   return (
     <>
@@ -42,7 +58,7 @@ const CartItem = ({ item }) => {
             <FontAwesomeIcon
               icon={faTrash}
               className="icon-awesome"
-              onClick={() => removeItem(item.id)}
+              onClick={deleteElement}
             />
           </div>
         </div>

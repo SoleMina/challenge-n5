@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { StyledHeadliner } from "../styled-components/Headliner.styled";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useItemsContext } from "../CartContext";
 //Import fontawesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -8,7 +8,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 const Thankyou = () => {
-  const { cartItems } = useItemsContext();
+  const { cartItems, setCartItems } = useItemsContext();
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (cartItems.length > 0) {
+      setTimeout(() => {
+        setCartItems([]);
+        navigate("/");
+      }, 3000);
+    }
+  });
 
   return (
     <div className="thankyou text-center">
