@@ -30,7 +30,7 @@ const ListContainer = () => {
   console.log(products);
   //
   return (
-    <div className="container">
+    <div className="container list">
       {loading ? (
         <Spinner text="Loading products" />
       ) : (

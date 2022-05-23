@@ -1,5 +1,5 @@
-$primary-color: red;
-$secondary-color: blue;
+$primary-color: #4169e1;
+$secondary-color: black;
 
 @mixin desktop {
   @media only screen and (min-width: 1201px) {

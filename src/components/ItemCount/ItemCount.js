@@ -1,12 +1,10 @@
 import React, { useState } from "react";
-//Import context
-import { useItemsContext } from "../../CartContext";
 import Swal from "sweetalert2";
 
 import "./ItemCount.scss";
 
-const ItemCount = ({ amount, onAdd, item, quantityToAdd }) => {
-  const [count, setCount] = useState(1);
+const ItemCount = ({ amount, onAdd }) => {
+  const [count, setCount] = useState(0);
 
   const increment = () => {
     count < amount && setCount(count + 1);

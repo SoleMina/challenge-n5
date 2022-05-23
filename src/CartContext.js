@@ -74,9 +74,7 @@ export const CartContext = ({ children }) => {
           break;
         }
       }
-
       /*
-      
       const newProducts = products.map((elem) => {
         if (elem.id === item.id) {
           elem.amount = elem.amount - amount;
@@ -86,23 +84,6 @@ export const CartContext = ({ children }) => {
     };
     console.log("STOCKKKK", products);
     setProducts(products);
-    updateStock();
-  };
-
-  //Add Product to firebase with Form
-  const addProductCart = async (cartItems, totalPrice) => {
-    const object = {
-      item: cartItems,
-      date: new Date(),
-      total: totalPrice
-    };
-    console.log("Producto agregado!!!!");
-
-    const updateStock = () => {
-      cartItems.forEach((element) => {
-        console.log("testtt");
-      });
-    };
     updateStock();
   };
 

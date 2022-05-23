@@ -3,7 +3,6 @@ import React from "react";
 import { useItemsContext } from "../../CartContext";
 //Font awesome icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 //Importar estilos
 import styles from "./CartWidget.module.scss";
 

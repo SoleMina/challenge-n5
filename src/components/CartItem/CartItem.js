@@ -1,13 +1,13 @@
 import React from "react";
 
+//Import context
+import { useItemsContext } from "../../CartContext";
+
 //Import fontawesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 //Import icon
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
-
-//Import context
-import { useItemsContext } from "../../CartContext";
 
 //Import estilos
 import "./CartItem.scss";
@@ -17,13 +17,13 @@ const CartItem = ({ item }) => {
 
   return (
     <>
-      <div className="cart-item text-center">
+      <div className="cartItem">
         <div className="row">
           <div className="col-md-2 justify-content-center">
             <img src={item.image} alt="Producto" width="80" />
           </div>
           <div className="col-md-2">
-            <span className="font-weight-bold">Product:</span>
+            <span>Product:</span>
             <h6>{item.name}</h6>
           </div>
           <div className="col-md-2">

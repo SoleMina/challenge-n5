@@ -23,14 +23,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
 .lightMode {
-  background-color: #4169e1;
+  background-color: mixin.$primary-color;
   transition: all 0.7s;
 }
 .darkMode {
-  background-color: black;
+  background-color: mixin.$secondary-color;
   color: white;
   transition: all 0.7s;
+}
+.h-70 {
+  min-height: 70vh;
 }
 .bodyColor {
   background-color: #848484;

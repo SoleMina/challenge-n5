@@ -1,15 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
-//Import from bootstrap
-import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
-//Import icon
-import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
-//Import component
 import CartWidget from "../CartWidget/CartWidget";
 import { useItemsContext } from "../../CartContext";
 import { useDispatch, useSelector } from "react-redux";
 import { login, selectUser } from "../../features/userSlice";
+
+//Import from bootstrap
+import { Navbar, Nav, Container } from "react-bootstrap";
+//Import icon
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 //Import style
 import styles from "./header.module.scss";
 
@@ -31,7 +30,7 @@ const Header = () => {
         collapseOnSelect
         expand="lg"
         variant="dark"
-        className={"test " + `${darkMode ? "darkMode" : "lightMode"}`}
+        className={`test ${darkMode ? "darkMode" : "lightMode"}`}
       >
         <Container>
           <Navbar.Brand as={Link} to="/">
@@ -67,18 +66,10 @@ const Header = () => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#">{user && "Hello Karina"}</Nav.Link>
+              <Nav.Link href="#"></Nav.Link>
             </Nav>
             <Nav>
-              <Nav.Link href="#"></Nav.Link>
-              <NavDropdown title="Categorías" id="basic-nav-dropdown">
-                <NavDropdown.Item as={Link} to="/category/laptop">
-                  Laptops
-                </NavDropdown.Item>
-                <NavDropdown.Item as={Link} to="/category/tv">
-                  Tv
-                </NavDropdown.Item>
-              </NavDropdown>
+              <Nav.Link href="#">{user && "Welcome Karina"}</Nav.Link>
               <Nav.Link
                 className="header__mobile"
                 eventKey={2}

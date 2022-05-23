@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-//Destructuring
-
 export const StyledHeadliner = styled.h2`
   color: ${({ bg }) => bg};
   padding: 40px 0;

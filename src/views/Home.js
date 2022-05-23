@@ -4,7 +4,7 @@ import { useItemsContext } from "../CartContext";
 import { StyledHeadliner } from "../styled-components/Headliner.styled";
 
 const Home = () => {
-  const { changeMode, darkMode } = useItemsContext();
+  const { darkMode } = useItemsContext();
 
   return (
     <div className={`home pt-3 pb-5 ${darkMode && "bodyColor"}`}>

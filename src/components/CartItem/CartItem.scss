@@ -1,11 +1,12 @@
-.cart-item {
+.cartItem {
   width: 70%;
   margin: 0 auto;
   padding: 1.5%;
   background-color: white;
   margin-bottom: 2%;
+  text-align: center;
   box-shadow: 0 1.5rem 4rem rgb(0 0 0 / 15%);
-}
-.icon-awesome {
-  cursor: pointer;
+  span {
+    font-weight: bold;
+  }
 }
