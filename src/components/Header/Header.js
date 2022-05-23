@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import CartWidget from "../CartWidget/CartWidget";
 import { useItemsContext } from "../../CartContext";
@@ -18,7 +18,9 @@ const Header = () => {
   const dispatch = useDispatch();
   const user = useSelector(selectUser);
 
-  dispatch(login(true));
+  useEffect(() => {
+    dispatch(login(true));
+  }, []);
 
   const changeHandle = () => {
     changeMode();

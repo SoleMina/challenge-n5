@@ -26,9 +26,6 @@ const ListContainer = () => {
       fetchData();
     }, 600);
   }, []);
-
-  console.log(products);
-  //
   return (
     <div className="container list">
       {loading ? (

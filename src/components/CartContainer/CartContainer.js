@@ -10,7 +10,6 @@ import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 const CartContainer = () => {
   const { cartItems, totalPrice, products, setProducts } = useItemsContext();
-  console.log(cartItems);
 
   const finalPurchase = () => {
     setProducts(products);

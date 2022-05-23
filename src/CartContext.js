@@ -45,7 +45,6 @@ export const CartContext = ({ children }) => {
   const [item, setItem] = useState([]);
   //DarkMode
   const [darkMode, setDarkMode] = useState(darkModeInLocal);
-  console.log("MODEEEE", darkMode);
 
   //Check if an element have the same id
   const isInCart = (id) => cartItems.some((e) => e.id === id);
@@ -74,15 +73,7 @@ export const CartContext = ({ children }) => {
           break;
         }
       }
-      /*
-      const newProducts = products.map((elem) => {
-        if (elem.id === item.id) {
-          elem.amount = elem.amount - amount;
-        }
-      });
-      setProducts(newProducts); */
     };
-    console.log("STOCKKKK", products);
     setProducts(products);
     updateStock();
   };
@@ -112,7 +103,6 @@ export const CartContext = ({ children }) => {
 
   const changeMode = () => {
     setDarkMode(!darkMode);
-    console.log(darkMode);
   };
 
   //Keep items updated
