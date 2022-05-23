@@ -10,4 +10,4 @@ Este proyecto fue realizado con react, utilizando hooks, styled components, redu
 
 El proyecto fue deployado utilizando el host de netlify.
 Se hizo `npm build` al proyecto y se subió el folder `build` al host.
-https://monumental-kitsune-1e53db.netlify.app/
+https://ubiquitous-licorice-27e2a2.netlify.app/
