@@ -9,3 +9,8 @@ In the project directory, you can run:
 ### `npm start`
 
 This project was build with hooks, styled components, redux, sass and more.
+
+### `Website url:`
+
+This project is deployed here:
+https://monumental-kitsune-1e53db.netlify.app/
