@@ -1,16 +1,13 @@
-# Getting Started with Create React App
+# Challenge N5 Now
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
+El proyecto fue realizado para el desafío de N5 now.
 
 ### `npm start`
 
-This project was build with hooks, styled components, redux, sass and more.
+Este proyecto fue realizado con react, utilizando hooks, styled components, redux, sass, etc.
 
 ### `Website url:`
 
-This project is deployed here:
+El proyecto fue deployado utilizando el host de netlify.
+Se hizo `npm build` al proyecto y se subió el folder `build` al host.
 https://monumental-kitsune-1e53db.netlify.app/
